@@ -1,5 +1,18 @@
-osc = require('osc/dist/osc-browser');
+var osc = require('osc/dist/osc-browser')
+	, oscPort = new osc.WebSocketPort({ url: 'ws://localhost:8081' })
+	, inputEl = document.getElementById("osc-input");
 
-// seems to be working!
-console.log('OSC!!!! ', osc);
+inputEl.addEventListener('change', valueChange);
 
+
+function valueChange() {
+	var val = parseInt(inputEl.value);
+
+	if(val) {
+		console.log(val);
+		oscPort.send({
+			address: "/test"
+			, args: val
+		})
+	}
+}
