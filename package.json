@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sfpc-amd/building-music/issues"
   },
-  "homepage": "https://github.com/sfpc-amd/building-music"
+  "homepage": "https://github.com/sfpc-amd/building-music",
+  "dependencies": {
+    "osc": "~2.0.0"
+  }
 }
