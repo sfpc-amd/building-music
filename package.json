@@ -18,5 +18,10 @@
   "homepage": "https://github.com/sfpc-amd/building-music",
   "dependencies": {
     "osc": "~2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-browserify": "~0.5.1",
+    "gulp-less": "~3.0.3"
   }
 }
